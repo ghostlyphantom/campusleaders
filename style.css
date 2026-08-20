@@ -1,0 +1,591 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f8;
+    color: #263238;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #102a43,
+        #1f4e79
+    );
+
+    color: white;
+
+    padding: 38px 20px;
+
+    border-bottom: 5px solid #d4a017;
+}
+
+.header-content {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+}
+
+.school-logo {
+    width: 125px;
+    height: 125px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    border: 4px solid #d4a017;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+.header-text {
+    text-align: left;
+}
+
+.header-text h1 {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+}
+
+.header-text p {
+    font-size: 18px;
+}
+
+.header-text .campus {
+    color: #f4d06f;
+
+    font-weight: bold;
+
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+nav {
+    background: white;
+
+    padding: 15px;
+
+    text-align: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+nav a {
+    display: inline-block;
+
+    color: #102a43;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 0 12px;
+
+    padding: 7px 5px;
+
+    border-bottom: 3px solid transparent;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b8860b;
+
+    border-bottom-color: #d4a017;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+}
+
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.intro {
+    background: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    margin-bottom: 45px;
+
+    border-top: 5px solid #d4a017;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.intro h2 {
+    color: #102a43;
+
+    font-size: 32px;
+
+    margin: 10px 0;
+}
+
+.intro p {
+    max-width: 850px;
+
+    margin: auto;
+
+    color: #607d8b;
+}
+
+
+/* ==========================================
+   SECTION BACKGROUNDS
+========================================== */
+
+.leadership-section {
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    margin-bottom: 50px;
+
+    scroll-margin-top: 80px;
+}
+
+.university-section {
+    background: #e7f0f8;
+}
+
+.campus-section {
+    background: #e8f5ed;
+}
+
+.deans-section {
+    background: #faf2dc;
+}
+
+.faculty-section {
+    background: #eeeafa;
+}
+
+.staff-section {
+    background: #f8eaea;
+}
+
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #102a43;
+
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.section-label {
+    display: inline-block;
+
+    background: #1f4e79;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+}
+
+.staff-label {
+    background: #8e4b4b;
+}
+
+
+/* ==========================================
+   TOP BUTTON
+========================================== */
+
+.top-button {
+    background: #102a43;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 16px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.top-button:hover {
+    background: #d4a017;
+
+    color: #102a43;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   SUBSECTION
+========================================== */
+
+.subsection-title {
+    background: rgba(255, 255, 255, 0.75);
+
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.subsection-title h3 {
+    color: #102a43;
+
+    font-size: 22px;
+}
+
+.subsection-title p {
+    color: #607d8b;
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.official-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+.single-card {
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.official-card {
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.official-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+.official-card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: contain;
+
+    background: #edf1f5;
+
+    padding: 10px;
+
+    display: block;
+}
+
+
+/* President larger */
+
+.single-card .official-card img {
+    height: 380px;
+}
+
+
+/* ==========================================
+   INFORMATION
+========================================== */
+
+.official-info {
+    padding: 22px;
+
+    text-align: center;
+
+    flex: 1;
+}
+
+.official-info h3 {
+    color: #102a43;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.official-info .title {
+    color: #b8860b;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.official-info p:last-child {
+    color: #607d8b;
+
+    font-size: 14px;
+
+    text-align: justify;
+}
+
+
+/* ==========================================
+   POSITION BADGES
+========================================== */
+
+.position-badge {
+    display: inline-block;
+
+    background: #d4a017;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    margin-bottom: 10px;
+}
+
+.faculty-badge {
+    background: #6655a8;
+}
+
+.staff-badge {
+    background: #8e4b4b;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: #102a43;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    border-top: 5px solid #d4a017;
+}
+
+footer h3 {
+    color: #f4d06f;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px;
+
+    color: #dce6ee;
+}
+
+.copyright {
+    margin-top: 20px !important;
+
+    font-size: 13px;
+
+    color: #aebdcc !important;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .header-text p {
+        font-size: 15px;
+    }
+
+    .school-logo {
+        width: 105px;
+        height: 105px;
+    }
+
+    nav {
+        position: static;
+    }
+
+    nav a {
+        margin: 4px 7px;
+
+        font-size: 13px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .leadership-section {
+        padding: 25px 15px;
+
+        border-radius: 14px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .official-container {
+        grid-template-columns: 1fr;
+    }
+
+    .official-card img {
+        height: 320px;
+    }
+
+    .single-card .official-card img {
+        height: 330px;
+    }
+
+}
