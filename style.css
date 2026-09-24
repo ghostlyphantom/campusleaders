@@ -596,28 +596,6 @@ MOBILE
 
 
 /* =========================================================
-RESPONSIVE DESIGN
-PC • LAPTOP • TABLET • PHONE
-========================================================= */
-
-/* Make sizing easier to control */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-
-/* =========================================================
 HEADER
 ========================================================= */
 
