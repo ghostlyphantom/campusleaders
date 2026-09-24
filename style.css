@@ -587,277 +587,432 @@ footer p {
     .single-card .official-card img {
         height: 330px;
     }
+
+    .gallery-grid img {
+        height: 140px;
     /* =========================================================
-   SCHOOL ACQUAINTANCE PAGE
+   RESPONSIVE DESIGN
+   PC • LAPTOP • TABLET • PHONE
+   ========================================================= */
+
+/* Make sizing easier to control */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.school-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.header-text {
+    min-width: 0;
+}
+
+.header-text h1 {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    width: 100%;
+}
+
+.intro h2,
+.day-heading h2,
+.session-heading h3 {
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DAY SECTIONS
    ========================================================= */
 
 .acquaintance-day {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
+    width: 100%;
+    margin-bottom: 50px;
 }
-
-.day-heading {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.day-heading h2 {
-    margin: 8px 0 12px;
-}
-
-.day-heading p {
-    max-width: 750px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-
-/* ================= SESSION ================= */
 
 .acquaintance-session {
-    margin-bottom: 60px;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
+.day-heading,
 .session-heading {
-    text-align: center;
-    margin-bottom: 25px;
+    width: 100%;
 }
 
-.session-heading h3 {
-    margin: 8px 0 12px;
-}
-
+.day-heading p,
 .session-heading p {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 900px;
     line-height: 1.7;
 }
 
-.session-label {
-    display: inline-block;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
 
-
-/* ================= PROGRAM ================= */
+/* =========================================================
+   PROGRAM CARDS
+   ========================================================= */
 
 .program-card {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    text-align: center;
-}
-
-.program-card h4 {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto;
+    overflow: hidden;
 }
 
 .program-image {
-    width: 100%;
-    max-height: 550px;
-    object-fit: contain;
     display: block;
-    margin: auto;
-    border-radius: 12px;
-    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 
-/* ================= IMAGE GALLERY ================= */
+/* =========================================================
+   IMAGE GALLERY
+   ========================================================= */
 
 .gallery-container {
     width: 100%;
+    margin: 25px auto;
 }
 
 .gallery-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
 .gallery-grid img {
     width: 100%;
-    height: 180px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 10px;
+    display: block;
     cursor: pointer;
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 
-/* ================= VIDEO ================= */
+/* =========================================================
+   VIDEOS
+   ========================================================= */
 
 .video-section {
-    margin-top: 60px;
-    margin-bottom: 70px;
+    width: 100%;
 }
 
 .video-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
+    grid-template-columns: minmax(0, 900px);
+    justify-content: center;
+}
+
+.video-card {
+    width: 100%;
+    overflow: hidden;
 }
 
 .video-card video {
-    width: 100%;
     display: block;
-    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 
-/* ================= IMAGE LIGHTBOX ================= */
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
 
 .image-lightbox {
-    display: none;
-
-    position: fixed;
-
-    z-index: 9999;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.92);
-
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
 }
 
-.image-lightbox.show {
-    display: flex;
-}
-
-.image-lightbox img {
-    max-width: 85%;
-    max-height: 85%;
-
+#lightboxImage {
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
-
-    border-radius: 8px;
 }
 
 
-/* ================= LIGHTBOX BUTTONS ================= */
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-    position: absolute;
-
-    border: none;
-
-    background: rgba(255, 255, 255, 0.15);
-
-    color: white;
-
-    cursor: pointer;
-
-    border-radius: 50%;
-
-    width: 45px;
-    height: 45px;
-
-    font-size: 25px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    transition: background 0.2s ease;
-}
-
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.lightbox-close {
-    top: 25px;
-    right: 30px;
-
-    font-size: 32px;
-}
-
-.lightbox-prev {
-    left: 25px;
-}
-
-.lightbox-next {
-    right: 25px;
-}
-
-
-/* ================= MOBILE ================= */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 900px) {
 
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
 
-    .gallery-grid img {
-        height: 160px;
+    .header-content {
+        padding: 18px;
+    }
+
+    main {
+        padding: 18px;
     }
 
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   SMALL TABLET / LARGE PHONE
+   ========================================================= */
 
-    .acquaintance-day {
-        padding: 0 15px;
-        margin-top: 35px;
+@media (max-width: 700px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .school-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
     }
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .program-card {
+        margin: 20px auto;
+    }
+
+    .day-heading h2 {
+        font-size: 1.7rem;
+    }
+
+    .session-heading h3 {
+        font-size: 1.35rem;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .header-content {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .school-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .header-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-text p {
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .intro {
+        padding: 15px;
+    }
+
+    .intro h2 {
+        font-size: 1.45rem;
+    }
+
+    .intro p,
+    .day-heading p,
+    .session-heading p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .day-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .session-heading h3 {
+        font-size: 1.2rem;
+    }
+
+    .session-label,
+    .section-label {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    /*
+       Two images per row on phones.
+       This keeps the gallery compact while
+       still showing multiple photos.
+    */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
     }
 
     .gallery-grid img {
-        height: 140px;
+        border-radius: 5px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .program-card {
+        padding: 10px;
+    }
+
+    .program-image {
+        width: 100%;
+        height: auto;
     }
 
     .video-grid {
         grid-template-columns: 1fr;
     }
 
-    .program-image {
-        max-height: 400px;
+    .video-card video {
+        width: 100%;
     }
 
-    .image-lightbox img {
-        max-width: 92%;
-        max-height: 80%;
+    .image-lightbox {
+        padding: 10px;
     }
 
-    .lightbox-prev {
-        left: 10px;
+    #lightboxImage {
+        max-width: 92vw;
+        max-height: 80vh;
     }
 
+    .lightbox-prev,
     .lightbox-next {
-        right: 10px;
+        font-size: 24px;
     }
 
     .lightbox-close {
-        right: 15px;
-        top: 15px;
+        font-size: 30px;
     }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .header-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-grid {
+        gap: 5px;
+    }
+
+    .intro h2 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 8px;
+    }
+
+}
 
 }
 
