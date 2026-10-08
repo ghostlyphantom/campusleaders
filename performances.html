@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Performances | ISUFST San Enrique Campus</title>
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6f8;
+            color: #263238;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #102a43,
+                #1f4e79
+            );
+
+            color: white;
+
+            padding: 38px 20px;
+
+            border-bottom: 5px solid #d4a017;
+        }
+
+        .header-content {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 28px;
+        }
+
+        .school-logo {
+            width: 125px;
+            height: 125px;
+
+            object-fit: contain;
+
+            background: white;
+
+            border-radius: 50%;
+
+            padding: 8px;
+
+            border: 4px solid #d4a017;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,.25);
+
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 40px;
+
+            margin-bottom: 8px;
+        }
+
+        .header-text p {
+            font-size: 18px;
+        }
+
+        .header-text .campus {
+            color: #f4d06f;
+
+            font-weight: bold;
+
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            background: white;
+
+            padding: 15px;
+
+            text-align: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,.10);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: inline-block;
+
+            color: #102a43;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            margin: 0 10px;
+
+            padding: 7px 5px;
+
+            border-bottom: 3px solid transparent;
+
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #b8860b;
+
+            border-bottom-color: #d4a017;
+        }
+
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        main {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 40px 20px;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            background: white;
+
+            padding: 40px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            margin-bottom: 50px;
+
+            border-top: 5px solid #d4a017;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,.08);
+        }
+
+        .section-label {
+            display: inline-block;
+
+            background: #1f4e79;
+
+            color: white;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+        }
+
+        .intro h2 {
+            color: #102a43;
+
+            font-size: 32px;
+
+            margin: 10px 0;
+        }
+
+        .intro p {
+            max-width: 850px;
+
+            margin: auto;
+
+            color: #607d8b;
+        }
+
+
+        /* =====================================================
+           DAY SECTION
+        ===================================================== */
+
+        .performance-day {
+            padding: 40px 30px;
+
+            border-radius: 20px;
+
+            margin-bottom: 50px;
+        }
+
+        .day-one {
+            background: #e7f0f8;
+        }
+
+        .day-two {
+            background: #eeeafa;
+        }
+
+
+        /* =====================================================
+           DAY HEADING
+        ===================================================== */
+
+        .day-heading {
+            background: rgba(255,255,255,.80);
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            margin-bottom: 30px;
+        }
+
+        .day-heading h2 {
+            color: #102a43;
+
+            font-size: 30px;
+
+            margin-top: 8px;
+        }
+
+        .day-heading p {
+            color: #607d8b;
+
+            max-width: 800px;
+
+            margin: 8px auto 0;
+        }
+
+
+        /* =====================================================
+           VIDEO GRID
+        ===================================================== */
+
+        .video-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 30px;
+        }
+
+
+        /* =====================================================
+           VIDEO CARD / BOX
+        ===================================================== */
+
+        .video-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid #dce3e8;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,.12);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 12px 28px rgba(0,0,0,.18);
+        }
+
+
+        /* =====================================================
+           VIDEO TOP BOX
+        ===================================================== */
+
+        .video-box {
+            background: #102a43;
+
+            padding: 12px;
+
+            border-bottom: 4px solid #d4a017;
+        }
+
+        .video-box video {
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            object-fit: contain;
+
+            background: #000;
+
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           VIDEO INFORMATION
+        ===================================================== */
+
+        .video-info {
+            padding: 22px;
+        }
+
+        .video-number {
+            display: inline-block;
+
+            background: #d4a017;
+
+            color: white;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            padding: 5px 11px;
+
+            border-radius: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .video-info h3 {
+            color: #102a43;
+
+            font-size: 21px;
+
+            margin-bottom: 7px;
+        }
+
+        .video-info p {
+            color: #607d8b;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           GOLD LINE
+        ===================================================== */
+
+        .gold-line {
+            width: 60px;
+
+            height: 4px;
+
+            background: #d4a017;
+
+            margin: 10px auto 25px;
+
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #102a43;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+
+            border-top: 5px solid #d4a017;
+        }
+
+        footer h3 {
+            color: #f4d06f;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px;
+
+            color: #dce6ee;
+        }
+
+        .copyright {
+            margin-top: 20px !important;
+
+            font-size: 13px;
+
+            color: #aebdcc !important;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .school-logo {
+                width: 105px;
+                height: 105px;
+            }
+
+            .header-text h1 {
+                font-size: 32px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =====================================================
+           PHONE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 28px 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 12px;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 28px;
+            }
+
+            .header-text p {
+                font-size: 15px;
+            }
+
+            .school-logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            nav {
+                position: static;
+
+                flex-direction: column;
+
+                padding: 10px;
+            }
+
+            nav a {
+                width: 100%;
+
+                text-align: center;
+
+                margin: 2px 0;
+            }
+
+            main {
+                padding: 25px 15px;
+            }
+
+            .intro {
+                padding: 25px 18px;
+            }
+
+            .intro h2 {
+                font-size: 25px;
+            }
+
+            .performance-day {
+                padding: 25px 15px;
+            }
+
+            .day-heading {
+                padding: 22px 15px;
+            }
+
+            .day-heading h2 {
+                font-size: 24px;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+
+                gap: 22px;
+            }
+
+            .video-card {
+                border-radius: 15px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .header-text h1 {
+                font-size: 22px;
+            }
+
+            .header-text p {
+                font-size: 14px;
+            }
+
+            .school-logo {
+                width: 75px;
+                height: 75px;
+            }
+
+            main {
+                padding: 18px 10px;
+            }
+
+            .intro {
+                padding: 20px 15px;
+            }
+
+            .intro h2 {
+                font-size: 21px;
+            }
+
+            .intro p {
+                font-size: 14px;
+            }
+
+            .performance-day {
+                padding: 20px 10px;
+            }
+
+            .day-heading h2 {
+                font-size: 21px;
+            }
+
+            .day-heading p {
+                font-size: 14px;
+            }
+
+            .video-box {
+                padding: 8px;
+            }
+
+            .video-info {
+                padding: 17px;
+            }
+
+            .video-info h3 {
+                font-size: 18px;
+            }
+
+            .video-info p {
+                font-size: 13px;
+            }
+
+            footer {
+                padding: 35px 15px;
+            }
+
+            footer p {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body id="top">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-content">
+
+        <img
+            src="images/isufst.jpg"
+            alt="ISUFST Logo"
+            class="school-logo"
+        >
+
+        <div class="header-text">
+
+            <h1>ISUFST San Enrique Campus</h1>
+
+            <p>School Acquaintance</p>
+
+            <p class="campus">
+                San Enrique Campus
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="index.html#university">
+        University
+    </a>
+
+    <a href="index.html#campus">
+        Campus
+    </a>
+
+    <a href="index.html#deans">
+        Deans
+    </a>
+
+    <a href="index.html#faculty">
+        Faculty
+    </a>
+
+    <a href="index.html#staff">
+        Staff
+    </a>
+
+    <a href="acquaintance.html">
+        School Acquaintance
+    </a>
+
+    <a href="performances.html" class="active">
+        Performances
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="intro">
+
+        <span class="section-label">
+            ISUFST SAN ENRIQUE CAMPUS
+        </span>
+
+        <h2>
+            Performances
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            Watch the different performances and special
+            presentations from the School Acquaintance—
+            Colors of Unity 2026.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DAY 1
+    ================================================== -->
+
+    <section class="performance-day day-one">
+
+        <div class="day-heading">
+
+            <span class="section-label">
+                Street Dance and Field Demonstration Performance
+            </span>
+
+            <h2>
+                Colors of Unity 2026 Dance Performances
+            </h2>
+
+            <p>
+                Performances and presentations featured
+                during the street dancing performance of different college departments.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 1 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p1.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Street Dance Performance
+                    </span>
+
+                    <h3>
+                        College of Education (COED)
+                    </h3>
+
+                    <p>
+                        A creative dance performance showcasing the talent, coordination, and teamwork of the COED students.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 2 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p2.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Street Dance Performance
+                    </span>
+
+                    <h3>
+                        College of Informatics and Computing Innovations (CICI)
+                    </h3>
+
+                    <p>
+                        A lively dance performance showcasing the creativity and teamwork of the CICI students.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 3 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p3.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Street Dance Performance
+                    </span>
+
+                    <h3>
+                        College of Business, Management, and Sustainable Development (CBMSD)
+                    </h3>
+
+                    <p>
+                        An energetic dance performance highlighting the unity and enthusiasm of the CBMSD students.
+                    </p>
+
+                </div>
+
+            </div>
+            
+            
+            <!-- VIDEO 4 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p4.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Street Dance Performance
+                    </span>
+
+                    <h3>
+                        College of Agriculture (COAG)
+                    </h3>
+
+                    <p>
+                        A vibrant dance performance featuring the energy and cultural spirit of the COAG students.
+                    </p>
+
+                </div>
+
+            </div>
+            
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DAY 2
+    ================================================== -->
+
+    <section class="performance-day day-two">
+
+        <div class="day-heading">
+
+            <span class="section-label">
+                Street Dance and Field Demonstration Performance
+            </span>
+
+            <h2>
+                Colors of Unity 2026 Dance Performances
+            </h2>
+
+            <p>
+                Special performances and presentations
+                featured during the field demonstration performance of different college departments.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <!-- VIDEO 4 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p5.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Field Demonstration Performance 
+                    </span>
+
+                    <h3>
+                        College of Education (COED)
+                    </h3>
+
+                    <p>
+                        Special performance featured
+                        during the Day 2 activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VIDEO 5 -->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p6.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Field Demonstration Performance 
+                    </span>
+
+                    <h3>
+                        College of Business, Management, and Sustainable Development (CBMSD)
+                    </h3>
+
+                    <p>
+                        Special performance featured
+                        during the Day 2 activities.
+                    </p>
+
+                </div>
+
+            </div>
+            
+            
+            <!-- VIDEO 7-->
+
+            <div class="video-card">
+
+                <div class="video-box">
+
+                    <video controls preload="metadata">
+
+                        <source
+                            src="p7.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        video playback.
+
+                    </video>
+
+                </div>
+
+                <div class="video-info">
+
+                    <span class="video-number">
+                        Field Demonstration Performance 
+                    </span>
+
+                    <h3>
+                        College of Informatics and Computing Innovations (CICI)
+                    </h3>
+
+                    <p>
+                        Special performance featured
+                        during the Day 2 activities.
+                    </p>
+
+                </div>
+
+            </div>
+            
+            
+            
+            </div>
+    </section>
+
+</main>
+
+<footer>
+    <h3>Iloilo State University of Fisheries Science and Technology</h3>
+    <p>San Enrique Campus, San Enrique, Iloilo</p>
+    <p>Website: isufst.edu.ph</p>
+    <p>Contact: (033) 327-3405 / 323-2058</p>
+    <p>Email: sanenriquecampus@gmail.com</p>
+    <p class="copyright">© 2026 ISUFST - San Enrique Campus</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+            
